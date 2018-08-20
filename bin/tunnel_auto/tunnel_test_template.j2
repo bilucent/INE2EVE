@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+
+{% for info in port_dict %}
+netstat -na -p tcp -v -x  | grep {{port_dict[info]}}
+{% endfor %}

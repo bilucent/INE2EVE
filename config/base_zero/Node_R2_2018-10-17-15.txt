@@ -1,0 +1,400 @@
+Building configuration...
+
+Current configuration : 3618 bytes
+!
+! Last configuration change at 13:40:26 UTC Wed Oct 17 2018 by cisco
+!
+version 16.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname csr1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+
+ip domain name cisco.com
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3219781786
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3219781786
+ revocation-check none
+ rsakeypair TP-self-signed-3219781786
+!
+!
+crypto pki certificate chain TP-self-signed-3219781786
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33323139 37383137 3836301E 170D3138 31303035 32323034 
+  35355A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 32313937 
+  38313738 36308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100BB80 BF6338F1 162917B8 A6472DA9 E6C870D3 ED33BADD 61BD4669 
+  AEBA63A0 A42F840B 98FB39AE 6FC6CC8F 4DBC88F2 9F5B65AF 43E1BDAD C600812F 
+  CC720C58 6C7156B1 EA77B2C5 86C1081A 7B46BA89 03A9858E 3EB519B5 43C555FB 
+  DE244228 1B774512 6F4A7A48 EE72DA35 FD42F046 8975B807 34B5F975 A3D7A768 
+  964C4296 321CAA63 125C19DA FE85F74F 526A9A7A C10FD809 C498F2B7 DE321613 
+  CB666610 D928E330 57CF43B0 C0B13A7F 5B637209 59D8C69C BE5D8B8D 965962AB 
+  6BD64A72 8A34F213 C8B3EA9B BCFE7EE7 7DF602B5 2C0891A8 0478476B F70A4BF8 
+  BF76B165 9D119A0D 1FBB9973 1C0EDAE6 C75B51CB C7EDCA45 3ABFAA73 AB916136 
+  8911F3E8 29830203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 14D8C76B 19ECFEBE 867CA5C2 A0D8FDB6 6CBB1BDC 
+  00301D06 03551D0E 04160414 D8C76B19 ECFEBE86 7CA5C2A0 D8FDB66C BB1BDC00 
+  300D0609 2A864886 F70D0101 05050003 82010100 BA7F73EC 2E5C8812 273E1443 
+  593F3E6E 613E113C F69CF955 00986A5A 8F26181E 33D4A468 639B3B97 7956F005 
+  AF96F603 F8595539 A5C95695 CF6CAE6B 1BCCA561 71C36827 012558BA DF7B52E5 
+  A142A8B2 DFB1980F 5AB94E74 34CCA6CF 41C3289F BC068005 1D94BC98 F48B12B0 
+  0D8B7DF9 537C9EFF A72E89E0 27FAD57B 4AD508E9 C44D1AC5 E12D80B7 6FF30D78 
+  C3578BF9 37051048 E95EC594 341B4C4D FBDDF8E8 1FC12BD1 849F33C7 0BAB4783 
+  27E0A65E B41E7DC9 F7B2A20F 5ED0B4AA B05189CB 8011992D 050A59AD 7C0798E7 
+  6A0BE638 FBB7E3A3 63062DD7 9BEE09DE 221588EF 453CF9B8 6E933740 8DF21AF5 
+  9E468653 0088BC2D AA9A1120 AA15B89A 7239B47A
+  	quit
+
+
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 9CVHBCP8MWZ
+diagnostic bootup level minimal
+!
+spanning-tree extend system-id
+!
+!
+username cisco privilege 15 password 0 cisco
+!
+redundancy
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+! 
+! 
+! 
+! 
+!
+!
+interface GigabitEthernet1
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet3
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet4
+ ip address 172.16.100.101 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+!
+!
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+!
+ip ssh version 2
+ip scp server enable
+!
+!
+!
+!
+!
+!
+control-plane
+!
+ !
+ !
+ !
+ !
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ privilege level 15
+ login local
+ transport input telnet ssh
+!
+!
+!
+!
+!
+!
+end
+Building configuration...
+
+Current configuration : 3618 bytes
+!
+! Last configuration change at 13:51:35 UTC Wed Oct 17 2018 by cisco
+!
+version 16.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname csr2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+
+ip domain name cisco.com
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3703611547
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3703611547
+ revocation-check none
+ rsakeypair TP-self-signed-3703611547
+!
+!
+crypto pki certificate chain TP-self-signed-3703611547
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33373033 36313135 3437301E 170D3138 31303035 32323436 
+  33365A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 37303336 
+  31313534 37308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100ACB2 3CF4BCA3 EFFBDB9E 58361C9E E5B0C455 EA547C43 4D919EE8 
+  EFE1BED1 8FB63A0E B47E54CB FEE06159 E6A29D15 E1F4CA06 7CC255EC 598A3672 
+  BA5C498B 236C5C9C 0602E973 831E67D8 A13A5753 BC4320DF 92BBEB66 431655D6 
+  BFBBD7A0 7E8BAF78 D56F48DE 2B9EAA50 0546C698 0E06B6D3 DE37ACB2 CBF5B23A 
+  05E08041 8FE648FE DE5258BF 2A89ACD6 AE87A3F7 F6F98AD4 082A4878 3BF5AB87 
+  1412A537 920263EE 3C95BCC7 C44B6D9A 1075DFE1 23C4689C 89BB7BEC 10215C54 
+  0BB99072 E65DEE9A 3A91B394 369F1B65 9FE9011E 74AF2E61 1490BE60 516149C8 
+  C3F72B18 127CBF3C 2FF2C96E 8C56C1B6 CF796FC8 E4497175 6658C69D 5F985E5A 
+  DAADD05B 3DA50203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 14544115 7A936375 9F7F4FED 72C8BE93 F4816B24 
+  12301D06 03551D0E 04160414 5441157A 9363759F 7F4FED72 C8BE93F4 816B2412 
+  300D0609 2A864886 F70D0101 05050003 82010100 0313EB51 A195C886 D56E3C38 
+  82C26A2A 78F3C24D FC4EEC53 7629B99A B4EF41B0 ACADE6B7 264A855F 9B2720A2 
+  D0E8DF56 002EE217 EC2DE376 8BE382EC E6D8EEBA 4363274A 82E606F8 9F7B1949 
+  D47970D2 6CAAEDC4 958FC551 B133B2A7 94B43E1F 25BC0B03 CD7E6EAD 45E35391 
+  DE79F537 77B558D5 D4919ABD 14DE9D64 3CD1A897 92CB98D2 C1F62766 6E0228C4 
+  C1D32103 A566BE07 03256900 FC73CB1B 23A91AAB 6D512801 FA331DE4 B0652095 
+  0DE02C17 9AF864D0 705E354C 53AB6D0A CEAC998A 3DC4B92D 483DDF7D 41582E6C 
+  AD895893 F5F0B9BB 77B1B386 8DFBD9FF 84C06592 4637AAFF 40D91594 73DCB8B4 
+  75F5C1B1 B6E188DC F79E54B0 FA3FAC71 D3E6B90F
+  	quit
+
+
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 950EP7DKVFV
+diagnostic bootup level minimal
+!
+spanning-tree extend system-id
+!
+!
+username cisco privilege 15 password 0 cisco
+!
+redundancy
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+! 
+! 
+! 
+! 
+!
+!
+interface GigabitEthernet1
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet3
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet4
+ ip address 172.16.100.102 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+!
+!
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+!
+ip ssh version 2
+ip scp server enable
+!
+!
+!
+!
+!
+!
+control-plane
+!
+ !
+ !
+ !
+ !
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ privilege level 15
+ login local
+ transport input telnet ssh
+!
+!
+!
+!
+!
+!
+end
