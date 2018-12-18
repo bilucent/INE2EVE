@@ -1,0 +1,33 @@
+#!/usr/bin/expect -f
+
+# set the variables
+set jumphost {{jumphost}}
+
+#hide password input
+
+
+send_user "enter username: "
+#stty -echo
+expect_user -re "(.*)\n"
+#stty echo
+set ssh_user $expect_out(1,string)
+#puts "you said $password"
+
+
+
+send_user "enter password: "
+#stty -echo
+expect_user -re "(.*)\n"
+#stty echo
+set password $expect_out(1,string)
+#puts "you said $password"
+
+
+{% for info in ip_dict %}
+set timeout -1
+spawn ssh $ssh_user@$jumphost -fN -L {{port_dict[info]}}:{{ip_dict[info]}}:22
+expect -- "*?assword:*"
+send "$password\n"
+expect eof
+sleep 1
+{% endfor %}

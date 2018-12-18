@@ -1,0 +1,5 @@
+
+{% for info in port_dict %}
+elif '{{info}}' in name:
+    return '{{type_dict[info]}}', {{port_dict[info]}}
+{% endfor %}

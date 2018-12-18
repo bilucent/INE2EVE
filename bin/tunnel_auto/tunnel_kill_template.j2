@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+
+{% for info in port_dict %}
+kill $(lsof -t -i:{{port_dict[info]}})
+{% endfor %}
