@@ -1,6 +1,5 @@
 '''
 Author          : Bijan R.Rofoee
-Email           : bijan.rofoee@sky.uk
 Version         : 0.1
 '''
 
@@ -8,7 +7,8 @@ from jinja2 import Environment, FileSystemLoader
 
 file_loader = FileSystemLoader('.')
 
-file = open('../list_lab.txt', 'r')
+# file = open('../list_lab.txt', 'r')
+file = open('list_lab.txt', 'r')
 file_lines = file.readlines()
 
 ip_dict = {}
@@ -23,7 +23,7 @@ for i in file_lines:
 env = Environment(loader=file_loader)
 
 
-jumphost = "10.246.65.138"
+jumphost = "10.246.65.133"
 
 template = env.get_template('tunnel_gen_template.j2')
 tunnel_gen_output = template.render(jumphost=jumphost, ip_dict=ip_dict, port_dict=port_dict)

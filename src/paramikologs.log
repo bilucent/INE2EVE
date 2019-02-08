@@ -9970,3 +9970,319 @@ ssh server v2
 end
 
 RP/0/0/CPU0:xrv12#
+2019-02-08 16:16:03,342:DEBUG:starting thread (client mode): 0xc072160
+2019-02-08 16:16:03,342:DEBUG:Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-08 16:16:06,341:ERROR:Exception: Error reading SSH protocol banner[Errno 54] Connection reset by peer
+2019-02-08 16:16:06,386:ERROR:Traceback (most recent call last):
+2019-02-08 16:16:06,387:ERROR:  File "/Users/bra17/.virtualenvs/venv_autounl/lib/python3.6/site-packages/paramiko/transport.py", line 2138, in _check_banner
+2019-02-08 16:16:06,387:ERROR:    buf = self.packetizer.readline(timeout)
+2019-02-08 16:16:06,387:ERROR:  File "/Users/bra17/.virtualenvs/venv_autounl/lib/python3.6/site-packages/paramiko/packet.py", line 367, in readline
+2019-02-08 16:16:06,387:ERROR:    buf += self._read_timeout(timeout)
+2019-02-08 16:16:06,387:ERROR:  File "/Users/bra17/.virtualenvs/venv_autounl/lib/python3.6/site-packages/paramiko/packet.py", line 561, in _read_timeout
+2019-02-08 16:16:06,387:ERROR:    x = self.__socket.recv(128)
+2019-02-08 16:16:06,387:ERROR:ConnectionResetError: [Errno 54] Connection reset by peer
+2019-02-08 16:16:06,387:ERROR:
+2019-02-08 16:16:06,387:ERROR:During handling of the above exception, another exception occurred:
+2019-02-08 16:16:06,387:ERROR:
+2019-02-08 16:16:06,388:ERROR:Traceback (most recent call last):
+2019-02-08 16:16:06,388:ERROR:  File "/Users/bra17/.virtualenvs/venv_autounl/lib/python3.6/site-packages/paramiko/transport.py", line 1966, in run
+2019-02-08 16:16:06,388:ERROR:    self._check_banner()
+2019-02-08 16:16:06,388:ERROR:  File "/Users/bra17/.virtualenvs/venv_autounl/lib/python3.6/site-packages/paramiko/transport.py", line 2143, in _check_banner
+2019-02-08 16:16:06,388:ERROR:    "Error reading SSH protocol banner" + str(e)
+2019-02-08 16:16:06,388:ERROR:paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[Errno 54] Connection reset by peer
+2019-02-08 16:16:06,388:ERROR:
+2019-02-08 16:17:14,430:DEBUG:starting thread (client mode): 0xae63160
+2019-02-08 16:17:14,430:DEBUG:Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-08 16:17:17,431:ERROR:Exception: Error reading SSH protocol banner[Errno 54] Connection reset by peer
+2019-02-08 16:17:17,433:ERROR:Traceback (most recent call last):
+2019-02-08 16:17:17,433:ERROR:  File "/Users/bra17/.virtualenvs/venv_autounl/lib/python3.6/site-packages/paramiko/transport.py", line 2138, in _check_banner
+2019-02-08 16:17:17,433:ERROR:    buf = self.packetizer.readline(timeout)
+2019-02-08 16:17:17,433:ERROR:  File "/Users/bra17/.virtualenvs/venv_autounl/lib/python3.6/site-packages/paramiko/packet.py", line 367, in readline
+2019-02-08 16:17:17,433:ERROR:    buf += self._read_timeout(timeout)
+2019-02-08 16:17:17,434:ERROR:  File "/Users/bra17/.virtualenvs/venv_autounl/lib/python3.6/site-packages/paramiko/packet.py", line 561, in _read_timeout
+2019-02-08 16:17:17,434:ERROR:    x = self.__socket.recv(128)
+2019-02-08 16:17:17,434:ERROR:ConnectionResetError: [Errno 54] Connection reset by peer
+2019-02-08 16:17:17,434:ERROR:
+2019-02-08 16:17:17,434:ERROR:During handling of the above exception, another exception occurred:
+2019-02-08 16:17:17,434:ERROR:
+2019-02-08 16:17:17,434:ERROR:Traceback (most recent call last):
+2019-02-08 16:17:17,434:ERROR:  File "/Users/bra17/.virtualenvs/venv_autounl/lib/python3.6/site-packages/paramiko/transport.py", line 1966, in run
+2019-02-08 16:17:17,434:ERROR:    self._check_banner()
+2019-02-08 16:17:17,434:ERROR:  File "/Users/bra17/.virtualenvs/venv_autounl/lib/python3.6/site-packages/paramiko/transport.py", line 2143, in _check_banner
+2019-02-08 16:17:17,434:ERROR:    "Error reading SSH protocol banner" + str(e)
+2019-02-08 16:17:17,435:ERROR:paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[Errno 54] Connection reset by peer
+2019-02-08 16:17:17,435:ERROR:
+2019-02-08 16:17:49,366:DEBUG:starting thread (client mode): 0x1f45160
+2019-02-08 16:17:49,367:DEBUG:Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-08 16:17:49,368:DEBUG:Remote version/idstring: SSH-2.0-Cisco-1.25
+2019-02-08 16:17:49,368:INFO:Connected (version 2.0, client Cisco-1.25)
+2019-02-08 16:17:49,369:DEBUG:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+2019-02-08 16:17:49,369:DEBUG:Kex agreed: diffie-hellman-group-exchange-sha1
+2019-02-08 16:17:49,369:DEBUG:HostKey agreed: ssh-rsa
+2019-02-08 16:17:49,370:DEBUG:Cipher agreed: aes128-ctr
+2019-02-08 16:17:49,370:DEBUG:MAC agreed: hmac-sha1
+2019-02-08 16:17:49,370:DEBUG:Compression agreed: none
+2019-02-08 16:17:49,372:DEBUG:Got server p (2048 bits)
+2019-02-08 16:17:50,084:DEBUG:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+2019-02-08 16:17:50,085:DEBUG:Switch to new keys ...
+2019-02-08 16:17:50,086:DEBUG:Adding ssh-rsa host key for [127.0.0.1]:22201: b'e6a133f3da7c557ad033690b27bb3970'
+2019-02-08 16:17:50,088:DEBUG:userauth is OK
+2019-02-08 16:17:50,090:INFO:Authentication (password) successful!
+2019-02-08 16:17:50,091:DEBUG:[chan 0] Max packet in: 32768 bytes
+2019-02-08 16:17:50,093:DEBUG:[chan 0] Max packet out: 4096 bytes
+2019-02-08 16:17:50,093:DEBUG:Secsh channel 0 opened.
+2019-02-08 16:17:50,095:DEBUG:[chan 0] Sesch channel 0 request ok
+2019-02-08 16:17:50,098:DEBUG:[chan 0] Sesch channel 0 request ok
+2019-02-08 16:17:51,206:DEBUG:read_channel: csr1#
+2019-02-08 16:17:51,310:DEBUG:read_channel: 
+2019-02-08 16:17:53,313:DEBUG:read_channel: 
+2019-02-08 16:17:53,314:DEBUG:read_channel: 
+2019-02-08 16:17:53,314:DEBUG:write_channel: b'\n'
+2019-02-08 16:17:53,417:DEBUG:read_channel: 
+csr1#
+2019-02-08 16:17:53,523:DEBUG:read_channel: 
+2019-02-08 16:17:53,625:DEBUG:read_channel: 
+2019-02-08 16:17:53,625:DEBUG:In disable_paging
+2019-02-08 16:17:53,626:DEBUG:Command: terminal length 0
+
+2019-02-08 16:17:53,626:DEBUG:write_channel: b'terminal length 0\n'
+2019-02-08 16:17:53,626:DEBUG:Pattern is: csr1
+2019-02-08 16:17:53,638:DEBUG:_read_channel_expect read_data: t
+2019-02-08 16:17:53,742:DEBUG:_read_channel_expect read_data: erminal length 0
+csr1#
+2019-02-08 16:17:53,742:DEBUG:Pattern found: csr1 terminal length 0
+csr1#
+2019-02-08 16:17:53,743:DEBUG:terminal length 0
+csr1#
+2019-02-08 16:17:53,743:DEBUG:Exiting disable_paging
+2019-02-08 16:17:53,743:DEBUG:write_channel: b'terminal width 511\n'
+2019-02-08 16:17:53,743:DEBUG:Pattern is: csr1
+2019-02-08 16:17:53,750:DEBUG:_read_channel_expect read_data: t
+2019-02-08 16:17:53,854:DEBUG:_read_channel_expect read_data: erminal width
+2019-02-08 16:17:53,958:DEBUG:_read_channel_expect read_data:  511
+csr1#
+2019-02-08 16:17:53,958:DEBUG:Pattern found: csr1 terminal width 511
+csr1#
+2019-02-08 16:17:54,263:DEBUG:read_channel: 
+2019-02-08 16:17:54,264:DEBUG:read_channel: 
+2019-02-08 16:17:54,264:DEBUG:write_channel: b'\n'
+2019-02-08 16:17:54,367:DEBUG:read_channel: 
+csr1#
+2019-02-08 16:17:54,470:DEBUG:read_channel: 
+2019-02-08 16:17:54,675:DEBUG:read_channel: 
+2019-02-08 16:17:54,675:DEBUG:write_channel: b'show run\n'
+2019-02-08 16:17:54,676:DEBUG:read_channel: 
+2019-02-08 16:17:54,880:DEBUG:read_channel: show run
+Building configuration...
+
+2019-02-08 16:17:55,083:DEBUG:read_channel: 
+2019-02-08 16:17:55,285:DEBUG:read_channel: 
+2019-02-08 16:17:55,488:DEBUG:read_channel: 
+2019-02-08 16:17:55,691:DEBUG:read_channel: 
+Current configuration : 3777 bytes
+!
+! Last configuration change at 13:48:36 UTC Fri Feb 8 2019
+!
+version 16.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname csr1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+
+no ip domain lookup
+ip domain name cisco.com
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3219781786
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3219781786
+ revocation-check none
+ rsakeypair TP-self-signed-3219781786
+!
+!
+crypto pki certificate chain TP-self-signed-3219781786
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33323139 37383137 3836301E 170D3138 31303035 32323034 
+  35355A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 32313937 
+  38313738 36308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100BB80 BF6338F1 162917B8 A6472DA9 E6C870D3 ED33BADD 61BD4669 
+  AEBA63A0 A42F840B 98FB39AE 6FC6CC8F 4DBC88F2 9F5B65AF 43E1BDAD C600812F 
+  CC720C58 6C7156B1 EA77B2C5 86C1081A 7B46BA89 03A9858E 3EB519B5 43C555FB 
+  DE244228 1B774512 6F4A7A48 EE72DA35 FD42F046 8975B807 34B5F975 A3D7A768 
+  964C4296 321CAA63 125C19DA FE85F74F 526A9A7A C10FD809 C498F2B7 DE321613 
+  CB666610 D928E330 57CF43B0 C0B13A7F 5B637209 59D8C69C BE5D8B8D 965962AB 
+  6BD64A72 8A34F213 C8B3EA9B BCFE7EE7 7DF602B5 2C0891A8 0478476B F70A4BF8 
+  BF76B165 9D119A0D 1FBB9973 1C0EDAE6 C75B51CB C7EDCA45 3ABFAA73 AB916136 
+  8911F3E8 29830203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 14D8C76B 19ECFEBE 867CA5C2 A0D8FDB6 6CBB1BDC 
+  00301D06 03551D0E 04160414 D8C76B19 ECFEBE86 7CA5C2A0 D8FDB66C BB1BDC00 
+  300D0609 2A864886 F70D0101 05050003 82010100 BA7F73EC 2E5C8812 273E1443 
+  593F3E6E 613E113C F69CF955 00986A5A 8F26181E 33D4A468 639B3B97 7956F005 
+  AF96F603 F8595539 A5C95695 CF6CAE6B 1BCCA561 71C36827 012558BA DF7B52E5 
+  A142A8B2 DFB1980F 5AB94E74 34CCA6CF 41C3289F BC068005 1D94BC98 F48B12B0 
+  0D8B7DF9 537C9EFF A72E89E0 27FAD57B 4AD508E9 C44D1AC5 E12D80B7 6FF30D78 
+  C3578BF9 37051048 E95EC594 341B4C4D FBDDF8E8 1FC12BD1 849F33C7 0BAB4783 
+  27E0A65E B41E7DC9 F7B2A20F 5ED0B4AA B05189CB 8011992D 050A59AD 7C0798E7 
+  6A0BE638 FBB7E3A3 63062DD7 9BEE09DE 221588EF 453CF9B8 6E933740 8DF21AF5 
+  9E468653 0088BC2D AA9A1120 AA15B89A 7239B47A
+  	quit
+
+
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 9CVHBCP8MWZ
+diagnostic bootup level minimal
+!
+spanning-tree extend system-id
+!
+!
+username cisco privilege 15 password 0 cisco
+!
+redundancy
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+! 
+! 
+! 
+! 
+!
+!
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+!
+interface GigabitEthernet1
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet3
+ ip address 10.0.0.1 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet4
+ ip address 172.16.100.101 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+router ospf 1
+ network 0.0.0.0 255.255.255.255 area 0
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+!
+ip ssh version 2
+ip scp server enable
+!
+!
+!
+!
+!
+!
+control-plane
+!
+ !
+ !
+ !
+ !
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ privilege level 15
+ login local
+ transport input telnet ssh
+!
+!
+!
+!
+!
+!
+end
+
+csr1#

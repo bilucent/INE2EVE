@@ -1,6 +1,5 @@
 '''
 Author          : Bijan R.Rofoee
-Email           : bijan.rofoee@sky.uk
 Version         : 0.1
 '''
 # Sample script to demonstrate loading a config for a device.

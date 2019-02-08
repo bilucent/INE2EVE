@@ -1,9 +1,6 @@
 '''
 Author          : Bijan R.Rofoee
-Email           : bijan.rofoee@sky.uk
 Version         : 0.1
-Date            : 01/03/2017
-Subject         : segment routing and traffic steering app
 '''
 import datetime
 import logging
@@ -61,8 +58,10 @@ class Scale_funcs():
 
     # TODO
     @staticmethod
-    def command_all(device_dict={}):
+    def command_all(device_dict=None):
 
+        if device_dict is None:
+            device_dict = {}
         threads = []
 
         if device_dict.values().__len__() is 0:
@@ -154,7 +153,7 @@ class Scale_funcs():
 
 def simple_test(device_type="cisco_ios",
                      ip="127.0.0.1",
-                     port="22205",
+                     port="22201",
                      username="cisco",
                      password="cisco"):
         device = {
@@ -172,7 +171,10 @@ def simple_test(device_type="cisco_ios",
             logging.error('=== NetMikoTimeoutException')
 
 if __name__=="__main__":
+
+    # simple_test()
     device_dict = read_device_list()
+
 
     # Scale_funcs.backup_to_file(device_dict)
     # Scale_funcs.command_all(device_dict)
